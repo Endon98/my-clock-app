@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Clock</title>
+    <style>
+        #clock-display {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock-display">
+        <!-- Clock will be displayed here -->
+    </div>
+    <script>
+        const timeDisplay = document.getElementById('clock-display');
+        document.addEventListener('DOMContentLoaded', () => {
+            timeDisplay.textContent = new Date().toLocaleTimeString();
+        })
+    </script>
+</body>
+</html>
