@@ -1,33 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live Clock</title>
     <style>
-        #clock-display {
-            font-size: 2em;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20%;
-        }
+      #container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: pink;
+        height: 100vh;
+      }
+      #clock-display {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        background-color: whitesmoke;
+        border-radius: 10px;
+      }
     </style>
-</head>
-<body>
-    <div id="clock-display">
+  </head>
+  <body>
+    <div id="container">
+      <div id="clock-display">
         <!-- Clock will be displayed here -->
+      </div>
     </div>
     <script>
-        const timeDisplay = document.getElementById('clock-display');
+      const timeDisplay = document.getElementById("clock-display");
 
-        // Function to get the current time and update the display
-        const getTime = () => timeDisplay.textContent = new Date().toLocaleTimeString();
+      // Function to get the current time and update the display
+      const getTime = () =>
+        (timeDisplay.textContent = new Date().toLocaleTimeString());
 
-        // Configure the getTime function to execute every second
-        document.addEventListener('DOMContentLoaded', () => {
-            getTime();
-            setInterval(getTime, 1000);
-        })
+      // Configure the getTime function to execute every second
+      document.addEventListener("DOMContentLoaded", () => {
+        getTime();
+        setInterval(getTime, 1000);
+      });
     </script>
-</body>
+  </body>
 </html>
