@@ -4,23 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Live Clock</title>
-    <style>
-      #container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: pink;
-        height: 100vh;
-      }
-      #clock-display {
-        font-size: 2em;
-        font-weight: bold;
-        text-align: center;
-        padding: 20px;
-        background-color: whitesmoke;
-        border-radius: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css"/>
   </head>
   <body>
     <div id="container">
@@ -28,18 +12,7 @@
         <!-- Clock will be displayed here -->
       </div>
     </div>
-    <script>
-      const timeDisplay = document.getElementById("clock-display");
-
-      // Function to get the current time and update the display
-      const getTime = () =>
-        (timeDisplay.textContent = new Date().toLocaleTimeString());
-
-      // Configure the getTime function to execute every second
-      document.addEventListener("DOMContentLoaded", () => {
-        getTime();
-        setInterval(getTime, 1000);
-      });
+    <script src="script.js">
     </script>
   </body>
 </html>
